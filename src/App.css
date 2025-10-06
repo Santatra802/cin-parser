@@ -1,0 +1,222 @@
+body {
+  background: #f6f8f7;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-box {
+  width: 90%;
+  max-width: 650px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 35px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #006b3f;
+  margin-bottom: 25px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.button {
+  width: 100%;
+  background-color: #006b3f;
+  color: white;
+  padding: 12px 0;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #00994c;
+}
+
+.save {
+  background-color: #00994c;
+}
+
+.save:hover {
+  background-color: #50a84d;
+}
+
+.error {
+  color: #e63946;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-top: 25px;
+}
+
+.card {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid #e5e5e5;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 45%;
+  font-weight: 500;
+  text-align: left;
+  color: #333;
+}
+
+input {
+  width: 50%;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+input:disabled {
+  background-color: #f0f0f0;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* Drapeau animé 🇲🇬 */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #eee;
+  border-radius: 8px;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-flag {
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, white 33%, red 33% 66%, green 66% 100%);
+  animation: flag-move 2s linear infinite alternate;
+}
+
+@keyframes flag-move {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Succès */
+.success-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-check {
+  font-size: 100px;
+  color: #00994c;
+  animation: pop 0.4s ease-in-out;
+}
+
+.big-text {
+  font-size: 34px;
+  color: #00994c;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.return-btn {
+  margin-top: 25px;
+  padding: 10px 20px;
+  background: #006b3f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.return-btn:hover {
+  background: #00994c;
+}
+
+/* Animations */
+@keyframes pop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Drapeau immobile par défaut */
+.progress-flag {
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, white 33%, red 33% 66%, green 66% 100%);
+  transform: translateX(0%); /* immobile */
+}
+
+/* Drapeau en mouvement */
+.moving-flag {
+  animation: flag-move 2s linear infinite alternate;
+}
+
+@keyframes flag-move {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
